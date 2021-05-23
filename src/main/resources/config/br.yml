@@ -11,9 +11,9 @@ BotToken: "BOTTOKEN"
 # A sintaxe é Channels: {"nome do canal no Minecraft": "ID numérico do canal do Discord", "outro nome de canal no Minecraft": "outro ID numérico de canal do Discord"}
 #
 # Todas as mensagens do DiscordSRV vão para o primeiro canal a menos que haja um canal definido para aquele tipo de mensagem:
-# quando usando um plugin de chat compatível, o nome do canal será o daquele plugin (para mensagens de chat)
+# quando usando um plugin de bate-papo compatível, o nome do canal será o daquele plugin (para mensagens de bate-papo)
 #  - Se você está usando TownyChat, o canal padrão normalmente é chamado de "general" ao invés de "global"
-# para mensagens de chat de jogadores (quando não estiver usando um plugin de chat): global
+# para mensagens de bate-papo de jogadores (quando não estiver usando um plugin de bate-papo): global
 # para mensagens de início/parada do servidor: status
 # para mensagens de conquistas/progressos: awards
 # para mensagens de morte: deaths
@@ -30,7 +30,7 @@ Channels: {"global": "000000000000000000"}
 DiscordConsoleChannelId: "000000000000000000"
 
 # Link de convite mostrado a jogadores ao usar /discord e na mensagem mostrada a jogadores não vinculados quando a vinculação é obrigada
-DiscordInviteLink: "https://discord.gg/changethisintheconfig.yml"
+DiscordInviteLink: "https://discord.gg/mudeissonoconfig.yml"
 
 # Opções de depuração, não tocar a menos que necessário
 #
@@ -64,31 +64,31 @@ DateFormat: yyyy-MM-dd
 # https://github.com/DiscordSRV/DiscordSRV/wiki/config#Timezone
 Timezone: default
 
-# Plugin hooks
+# Ganchos do plugin
 #
-# DisabledPluginHooks: plugin hooks that will not be used (usually just the name of the plugin)
-# VentureChatBungee: enables the VentureChat hook's BungeeCord functionality (messages are received from every server, requires atleast 1 player to be online)
-# EnablePresenceInformation: enabled presence information, which is required for some of our PlaceholderAPI placeholders. Keep in mind this requires the "Presence Intent" from the Discord developer portal
-# UseModernPaperChatEvent: only use this if you have a chat plugins that SPECIFICALLY utilizes Paper's "AsyncChatEvent"
+# DisabledPluginHooks: Ganchos do plugin que não serão usados (normalmente só o nome do plugin)
+# VentureChatBungee: habilita a funcionalidade do BungeeCord no gancho do VentureChat (mensagens são recebidas de todos os servidores, requer pelo menos 1 jogador online)
+# EnablePresenceInformation: Informação de presença habilitada, que é necessária para alguns placeholders de nossa PlaceholderAPI. Tenha em mente que isso requer a "Intenção de Presença" do portal do desenvolvedor do Discord
+# UseModernPaperChatEvent: Somente use isso se você tem plugins de bate-papo que utilizam ESPECIFICAMENTE o "AsyncChatEvent" do Paper
 DisabledPluginHooks: []
 VentureChatBungee: false
 EnablePresenceInformation: false
 UseModernPaperChatEvent: false
 
-# Game Information
-# Sets the "Playing: ______" indicator for the bot.
-# Can be a single, static value, or cycle through multiple different options
-# You can preface the status with "playing", "watching", or "listening to" to set the activity type
-# PlaceholderAPI placeholders are supported
+# Informação de Jogo
+# Define o indicator de "Jogando: ______" do bot.
+# Pode ser um único valor estático ou percorrer por várias opções diferentes
+# Você pode prefaciar o status com "jogando", "assistindo", ou "ouvindo" para definir o tipo de atividade
+# Placeholders da PlaceholderAPI são suportados
 #
-# DiscordGameStatus: Text to display. Can be a single value e.g. "Minecraft", or multiple values e.g. ["Minecraft", "yourip.changeme.com"]
-# StatusUpdateRateInMinutes: How frequently to cycle the status
+# DiscordGameStatus: Texto a ser exibido. Pode ser um único valor e.g. "Minecraft", ou múltiplos valores e.g. ["Minecraft", "seuip.memude.com"]
+# StatusUpdateRateInMinutes: Frequência de mudança do status
 DiscordGameStatus: "Minecraft"
 StatusUpdateRateInMinutes: 2
 
-# Chat channel information
-# The chat channel is the text channel that all messages in-game will be sent to and all messages sent
-# to this channel on Discord will be sent in-game
+# Informação do canal de bate-papo
+# O canal de bate-papo é o canal de texto em que todas as mensagens do jogo serão enviadas e todas as mensagens enviadas
+# nesse canal no Discord serão enviadas para o jogo
 #
 # DiscordChatChannelDiscordToMinecraft: whether or not to send messages in the chat channel to the server chat
 # DiscordChatChannelMinecraftToDiscord: whether or not to send messages in the server chat to the chat channel
